@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +16,6 @@ li {
 body {
   background: linear-gradient(101.07deg, #2e3c87 7.93%, #6a1094 93.3%);
   font-family: "Nunito", sans-serif;
-
   display: flex;
   justify-content: center;
   position: relative;
@@ -41,12 +39,12 @@ body {
 }
 
 .container .profile {
-    width: 104px;
-    margin-bottom: 20px;
-    height: 104px;
-    border-radius: 50%;
-    object-fit: cover;
-    z-index: 99;
+  width: 104px;
+  margin-bottom: 20px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 99;
 }
 
 .container h2 {
@@ -65,10 +63,8 @@ body {
   width: 223px;
   justify-content: space-around;
   align-items: center;
-
   background: rgba(224, 224, 224, 0.35);
   border-radius: 50px;
-
   position: absolute;
   top: -32px;
   left: calc(50% - 111px);
@@ -101,6 +97,60 @@ body {
   padding: 50px 30px 20px;
   width: 100%;
   color: #43085f;
+  overflow: hidden;
+  position: relative;
+}
+
+.secondary-content {
+  visibility: hidden;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 100%;
+  top: 50px;
+  z-index: 2;
+  padding: 0 30px;
+}
+
+.secondary-content h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.secondary-content h3 svg {
+  margin-right: 10px;
+}
+
+.secondary-content.show {
+  animation: content-show 0.5s forwards;
+}
+
+.secondary-content.hide {
+  animation: content-hide 0.5s forwards;
+}
+
+@keyframes content-show {
+  0% {
+    left: 100%;
+    visibility: hidden;
+  }
+  100% {
+    left: 0;
+    visibility: visible;
+  }
+}
+
+@keyframes content-hide {
+  0% {
+    left: 0;
+    visibility: visible;
+  }
+  100% {
+    left: 100%;
+    visibility: hidden;
+  }
 }
 
 .video-container {
@@ -122,7 +172,6 @@ body {
   margin: 15px auto;
   width: 100%;
   height: 45px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +179,7 @@ body {
   border-radius: 16px;
   text-decoration: none;
   color: #43085f;
-
+  cursor: pointer;
   -webkit-box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
   -moz-box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
   box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
